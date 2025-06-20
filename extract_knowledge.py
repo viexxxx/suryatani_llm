@@ -38,7 +38,6 @@ knowledge_base = FAISS.from_texts(chunks, embeddings)
 #chat logic
 print("[INFO] Starting Bot ..")
 while True:
-    pertanyaan = input("Anda > ")
     docs = knowledge_base.similarity_search(pertanyaan)
 
     llm = OpenAI()
